@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tim Wenn Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Tim Wenn</div>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="gallery" class="gallery">
+      <img src="https://via.placeholder.com/300" alt="Bild 1" onclick="openModal(this.src)" />
+      <img src="https://via.placeholder.com/300" alt="Bild 2" onclick="openModal(this.src)" />
+      <img src="https://via.placeholder.com/300" alt="Bild 3" onclick="openModal(this.src)" />
+    </section>
+
+    <section id="kontakt" class="kontakt">
+      <h2>Kontakt</h2>
+      <p>Du kannst mir gerne auf <a href="https://www.instagram.com" target="_blank">Instagram</a> schreiben.</p>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Vorschau">
+  </div>
+
+  <script>
+    function openModal(src) {
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("modal-img").src = src;
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
